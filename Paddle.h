@@ -10,12 +10,14 @@ class Paddle : public GameActor
 
 private:
 
-	Rect2 mBoundingBox;
 	KeyboardKey mUpKey;
 	KeyboardKey mDownKey;
 	Color mColor;
 
 protected:
+
+	Rect2 mBoundingBox;
+
 	void MoveUp();
 	void MoveDown();
 

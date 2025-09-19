@@ -15,8 +15,6 @@ public:
 
 	ImageActor(Vect2F position, Vect2F size, string texture);
 
-
-
 	// Inherited via GameActor
 	void Init() override;
 	void Update() override;

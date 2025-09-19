@@ -2,6 +2,7 @@
 
 #include "Button.h"
 #include "Ball.h"
+#include "PaddleBot.h"
 #include "Image.h"
 
 enum Scenes

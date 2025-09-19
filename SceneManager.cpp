@@ -31,6 +31,7 @@ void SceneManager::InitPve()
 	GlobalVariables::LeftScore = 0, GlobalVariables::RightScore = 0;
 	new Ball(GlobalVariables::ScreenMiddle, GlobalVariables::BallStartVel, 15, RAYWHITE);
 	new Paddle({ (float)GetScreenWidth() / 10, (float)GetScreenHeight() / 2 }, { 20.0f, 100.0f }, KEY_UP, KEY_DOWN, RED);
+	new PaddleBot({ (float)GetScreenWidth() / 10 * 9, (float)GetScreenHeight() / 2 }, { 20.0f, 100.0f }, BLUE);
 
 }
 

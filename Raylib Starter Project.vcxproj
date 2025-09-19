@@ -148,6 +148,7 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Paddle.cpp" />
+    <ClCompile Include="PaddleBot.cpp" />
     <ClCompile Include="Render2D.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Utils.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="GlobalVariables.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Paddle.h" />
+    <ClInclude Include="PaddleBot.h" />
     <ClInclude Include="Render2D.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Utils.h" />

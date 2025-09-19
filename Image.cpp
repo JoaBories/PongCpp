@@ -22,5 +22,4 @@ void ImageActor::Update()
 void ImageActor::Draw()
 {
 	mRender.Draw(mTransform);
-	mRender.GetTextureSpace().toObjectSpace(mTransform).DrawDebug(10);
 }
