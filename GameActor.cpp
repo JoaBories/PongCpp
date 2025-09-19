@@ -98,6 +98,21 @@ void GameActor::KillPendingActors()
 	}
 }
 
+void GameActor::Killa()
+{
+	for (auto& actorList : mActorLogicList)
+	{
+		for (size_t i = 0; i < actorList.second.size(); i++)
+		{
+			delete actorList.second[i];
+		}
+	}
+
+	mActorLogicList.clear();
+	mActorRenderList.clear();
+	mActorTagMap.clear();
+}
+
 GameActor::GameActor() :
 	mLogicPriority{ 0 },
 	mRenderPriority{ 0 },

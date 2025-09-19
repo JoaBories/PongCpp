@@ -38,6 +38,7 @@ public:
 
 	static vector<GameActor*> GetActorsByTag(Tag tag);
 	static void KillPendingActors();
+	static void Killa();
 
 	//Public for object only
 	GameActor();

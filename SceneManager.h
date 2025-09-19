@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GameActor.h"
+#include "Button.h"
 
 enum Scenes
 {
@@ -17,6 +18,12 @@ private:
 	Scenes mCurrentScene;
 	static SceneManager* mpInstance;
 
+	Button* mButton1;
+	Button* mButton2;
+
+	void testFunc();
+
+
 public:
 	SceneManager() = default;
 	~SceneManager() = default;
@@ -25,5 +32,7 @@ public:
 
 	void ChangeScene(Scenes newScene);
 	inline Scenes GetCurrentScene() const { return mCurrentScene; };
+	void Update();
+	void DrawUI() const;
 };
 

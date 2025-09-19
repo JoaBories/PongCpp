@@ -243,3 +243,11 @@ Collision Rect2::CheckOBB(const Rect2& other) const
 
 #pragma endregion
 
+bool RaylibUtils::DrawTextCentered(string text, Vect2F position, int fontSize, Color color)
+{
+	float xCentered = position.x - (float)MeasureText(text.c_str(), fontSize) / 2;
+	float yCentered = position.y - (float)fontSize / 2;
+	DrawText(text.c_str(), xCentered, yCentered, fontSize, color);
+
+	return true;
+}

@@ -186,6 +186,9 @@ namespace Struct {
 		Vect2F halfSize;
 		float rotation;
 
+		Rect2() = default;
+		Rect2(Vect2F _center, Vect2F _halfSize, float _rotation = 0): center{ _center }, halfSize{ _halfSize }, rotation{ _rotation } {}
+
 		vector<Vect2F> getCorners() const;
 
 		//Collision
@@ -242,4 +245,12 @@ namespace MathUtils {
 	bool NearlyEqual(const float a, const float b);
 
 	int RandInt(int min, int max);
+};
+
+using Struct::Vect2F;
+#include <string>
+using std::string;
+
+namespace RaylibUtils {
+	bool DrawTextCentered(string text, Vect2F position, int fontSize, Color color);
 };

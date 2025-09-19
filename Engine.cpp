@@ -18,20 +18,22 @@ Engine::~Engine()
 
 	delete mCamera;
 	delete mAssetBank;
-
-	cout << "close window" << endl;
+	delete mSceneManager;
 }
 
 void Engine::Init()
 {
 	mAssetBank = AssetBank::GetInstance();
 	mCamera = Cam2D::GetInstance();
+	mSceneManager = SceneManager::GetInstance();
 
 	mAssetBank->Init();
 
 	InitActors(); // for actors created before (if there is)
 
 	GlobalVariables::EngineRunning = true;
+
+	mSceneManager->ChangeScene(Start);
 }
 
 void Engine::InitActors()
@@ -53,6 +55,7 @@ void Engine::InitActors()
 void Engine::Update()
 {
 	mCamera->Update();
+	mSceneManager->Update();
 
 	UpdateActors();
 
@@ -78,6 +81,8 @@ void Engine::UpdateActors()
 void Engine::Draw()
 {
 	DrawActors();
+
+	mSceneManager->DrawUI();
 
 	if (GlobalVariables::ShowFPS)
 	{
