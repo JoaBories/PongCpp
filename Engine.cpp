@@ -23,11 +23,14 @@ Engine::~Engine()
 
 void Engine::Init()
 {
+	GlobalVariables::ScreenMiddle = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 };
+	
 	mAssetBank = AssetBank::GetInstance();
 	mCamera = Cam2D::GetInstance();
 	mSceneManager = SceneManager::GetInstance();
 
 	mAssetBank->Init();
+	mCamera->SetPosition(GlobalVariables::ScreenMiddle);
 
 	InitActors(); // for actors created before (if there is)
 

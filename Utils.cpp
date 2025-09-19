@@ -186,7 +186,7 @@ void Struct::Rect2::DrawDebug(float scale) const
 
 	vector<Vect2F> corners = getCorners();
 
-	Vect2F& lastCorner = corners[3];
+	Vect2F lastCorner = corners[3];
 
 	for (const Vect2F& corner : corners)
 	{

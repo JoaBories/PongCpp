@@ -1,8 +1,13 @@
 #pragma once
+
+#include "Utils.h"
+using Struct::Vect2F;
+
 class GlobalVariables
 {
 
 public:
+
 	//Engine Use ===============
 	static bool EngineRunning; // engine has passed init state
 
@@ -13,5 +18,12 @@ public:
 
 	static bool ShowFPS; //Show FPS on screen
 
+	static float PaddleMoveSpeed;
+	static Vect2F BallStartVel;
+	static Vect2F ScreenMiddle;
+
+	static int LeftScore;
+	static int RightScore;
+	static int WinScore;
 };
 

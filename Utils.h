@@ -1,8 +1,6 @@
 #pragma once
 #include "raylib.h"
 
-#include "GlobalVariables.h"
-
 #include <random>
 using std::random_device;
 using std::mt19937;

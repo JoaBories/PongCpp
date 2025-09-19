@@ -1,7 +1,8 @@
 #pragma once
 
-#include "GameActor.h"
 #include "Button.h"
+#include "Ball.h"
+#include "Image.h"
 
 enum Scenes
 {
@@ -21,7 +22,10 @@ private:
 	Button* mButton1;
 	Button* mButton2;
 
-	void testFunc();
+	void InitButtons();
+	void InitPvp();
+	void InitPve();
+	void DrawScore() const;
 
 
 public:
