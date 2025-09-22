@@ -19,6 +19,7 @@ void SceneManager::InitButtons()
 void SceneManager::InitPvp()
 {
 	new ImageActor(GlobalVariables::ScreenMiddle, { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 }, "core");
+	new ImageActor(GlobalVariables::ScreenMiddle, { 20, (float)GetScreenHeight() / 2 }, "net");
 	GlobalVariables::LeftScore = 0, GlobalVariables::RightScore = 0;
 	new Ball(GlobalVariables::ScreenMiddle, GlobalVariables::BallStartVel, 15, RAYWHITE);
 	new Paddle({ (float)GetScreenWidth() / 10, (float)GetScreenHeight() / 2 }, { 20.0f, 100.0f }, KEY_W, KEY_S, RED);
@@ -28,6 +29,7 @@ void SceneManager::InitPvp()
 void SceneManager::InitPve()
 {
 	new ImageActor(GlobalVariables::ScreenMiddle, { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 }, "core");
+	new ImageActor(GlobalVariables::ScreenMiddle, { 20, (float)GetScreenHeight() / 2 }, "net");
 	GlobalVariables::LeftScore = 0, GlobalVariables::RightScore = 0;
 	new Ball(GlobalVariables::ScreenMiddle, GlobalVariables::BallStartVel, 15, RAYWHITE);
 	new Paddle({ (float)GetScreenWidth() / 10, (float)GetScreenHeight() / 2 }, { 20.0f, 100.0f }, KEY_UP, KEY_DOWN, RED);
